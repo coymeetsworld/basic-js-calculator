@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <title>FreeCodeCamp - JavaScript Calculator</title>
+  </head>
+  <body>
+    <div class="container-fluid" id="calculator">
+      <div class="row">
+        <table id="calculator">
+          <tr>
+            <td colspan="4"><h1>FreeCodeCamp</h1></td>
+          </tr>
+          <tr>
+            <td colspan="4"><h2>Calculator</h2></td>
+          </tr>
+          <tr>
+            <td colspan="4" id="screen"></td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="function_key" id="key_ac">AC</button> <!-- clears all entries -->
+            </td>
+            <td>
+              <button type="button" class="function_key" id="key_ce">CE</button> <!-- clears current entry -->
+            </td>
+            <td>
+              <button type="button" class="operator_key" id="key_percent">%</button>
+            </td>
+            <td>
+              <button type="button" class="operator_key" id="key_divide">/</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="num_key" id="key_7">7</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_8">8</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_9">9</button>
+            </td>
+            <td>
+              <button type="button" class="operator_key" id="key_times">X</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="num_key" id="key_4">4</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_5">5</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_6">6</button>
+            </td>
+            <td>
+              <button type="button" class="operator_key" id="key_minus">-</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="num_key" id="key_1">1</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_2">2</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_3">3</button>
+            </td>
+            <td rowspan="2">
+              <button type="button" class="operator_key" id="key_plus">+</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="num_key" id="key_0">0</button>
+            </td>
+            <td>
+              <button type="button" class="num_key" id="key_decimal">.</button>
+            </td>
+            <td>
+              <button type="button" class="operator_key" id="key_equals">=</button>
+            </td>
+          </tr>
+        </table>
+      </div> <!-- class="row" -->
+    </div> <!-- class="container-fluid" -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="calc.js"></script>
+  </body>
+</html>
