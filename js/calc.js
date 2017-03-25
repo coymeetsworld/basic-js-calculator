@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-  $("#screen").append("<p id=\"screen_val\">0</p>");
+  $("#screen").append("<p id=\"screen-val\">0</p>");
 
   var operators = ["+", "-", "*", "/"];
   var equation_parts = [];
@@ -10,7 +10,7 @@ $(document).ready(function() {
   var current_operator = null;
 
   function clearScreen() {
-    $("#screen_val").html(0);
+    $("#screen-val").html(0);
   }
 
   /* Updates the current value on the screen. If a operator key was pressed previous to this, that key and the value on the screen prior are stored in the array for future processing. */
@@ -32,37 +32,37 @@ $(document).ready(function() {
 
     var num;
     switch(num_id) {
-      case "key_1":
+      case "key-1":
          num = 1;
          break;
-      case "key_2":
+      case "key-2":
          num = 2;
          break;
-      case "key_3":
+      case "key-3":
          num = 3;
          break;
-      case "key_4":
+      case "key-4":
          num = 4;
          break;
-      case "key_5":
+      case "key-5":
          num = 5;
          break;
-      case "key_6":
+      case "key-6":
          num = 6;
          break;
-      case "key_7":
+      case "key-7":
          num = 7;
          break;
-      case "key_8":
+      case "key-8":
          num = 8;
          break;
-      case "key_9":
+      case "key-9":
          num = 9;
          break;
-      case "key_0":
+      case "key-0":
          num = 0;
          break;
-      case "key_decimal":
+      case "key-decimal":
          num = ".";
          break;
       default:
@@ -75,33 +75,33 @@ $(document).ready(function() {
       current_val = current_val.concat(num.toString());
     }
 
-    console.log("current_val: " + current_val);
-    $("#screen_val").html(current_val);
+    console.log("current-val: " + current_val);
+    $("#screen-val").html(current_val);
   }
 
 
   /* Determines which operation to put in the array given which operation key was pressed. */
   function processOperationClick(op_id) {
 
-    console.log("op_id: " + op_id);
+    console.log("op-id: " + op_id);
     var op;
     switch(op_id) {
-      case "key_plus":
+      case "key-plus":
          op = "+";
          break;
-      case "key_minus":
+      case "key-minus":
          op = "-";
          break;
-      case "key_times":
+      case "key-times":
          op = "*";
          break;
-      case "key_divide":
+      case "key-divide":
          op = "/";
          break;
-      case "key_percent":
+      case "key-percent":
          generatePercentValue();
          break;
-      case "key_equals":
+      case "key-equals":
          calculateValue();
          break;
       default:
@@ -124,7 +124,7 @@ $(document).ready(function() {
     console.log("Generate percent value: " );
     current_val /= 100;
     current_val = getPrintedValue(current_val);
-    $("#screen_val").html(current_val);
+    $("#screen-val").html(current_val);
   }
 
   /*
@@ -184,13 +184,13 @@ $(document).ready(function() {
     current_val = equation_parts[0];
     console.log("value (not printed): " + current_val);
     current_val = getPrintedValue(current_val);
-    $("#screen_val").html(current_val);
+    $("#screen-val").html(current_val);
     equation_parts = [];
   };
 
 
   /* Handles clicking one of the number keys (0-9). */
-  $(".num_key").click(function() {
+  $(".num-key").click(function() {
     console.log("Pressed a number key.");
     console.log("Pressed button " + this.id);
     processNumClick(this.id);
@@ -198,7 +198,7 @@ $(document).ready(function() {
 
 
   /* Handles clicking an operation key (+,-,*,/,%) */
-  $(".operator_key").click(function() {
+  $(".operator-key").click(function() {
     console.log("Pressed an operator key.");
     console.log("Pressed button " + this.id);
     processOperationClick(this.id);
@@ -206,14 +206,14 @@ $(document).ready(function() {
 
 
   /* Handles clicking the CE button. Leaves memory in tact but clears out current value on the screen. */
-  $("#key_ce").click(function() {
+  $("#key-ce").click(function() {
     current_val = 0;
     clearScreen();
   });
 
 
   /* Handles clicking the AC button. Clears out memory and the screen. */
-  $("#key_ac").click(function() {
+  $("#key-ac").click(function() {
     current_val = 0;
     clearScreen();
     equation_parts = [];
